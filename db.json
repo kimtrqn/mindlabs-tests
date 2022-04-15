@@ -7,8 +7,8 @@
             "firstName": "Madeline ",
             "lastName": "Cole",
             "gender": "female",
-            "email": "madelinecole@animalia.com",
-            "password": "helloword",
+            "email": "testing@gmail.com",
+            "password": "helloworld",
             "phone": "+1 (881) 479-2960",
             "address": "802 John Street, Byrnedale, South Carolina, 4719",
             "createdAt": "2019-04-03T01:35:47 +07:00"
@@ -21,7 +21,7 @@
             "lastName": "Brown",
             "gender": "female",
             "email": "lilianbrown@animalia.com",
-            "password": "helloword",
+            "password": "helloworld",
             "phone": "+1 (957) 546-3495",
             "address": "929 Woodhull Street, Thornport, Hawaii, 3879",
             "createdAt": "2014-12-03T06:45:00 +08:00"
@@ -34,7 +34,7 @@
             "lastName": "Velez",
             "gender": "female",
             "email": "biancavelez@animalia.com",
-            "password": "helloword",
+            "password": "helloworld",
             "phone": "+1 (993) 516-3318",
             "address": "714 Hawthorne Street, Dixonville, Rhode Island, 8166",
             "createdAt": "2018-05-22T05:55:05 +07:00"
@@ -47,7 +47,7 @@
             "lastName": "Cardenas",
             "gender": "male",
             "email": "welchcardenas@animalia.com",
-            "password": "helloword",
+            "password": "helloworld",
             "phone": "+1 (860) 461-3869",
             "address": "132 Belmont Avenue, Glidden, Georgia, 934",
             "createdAt": "2022-01-03T03:48:50 +08:00"
@@ -60,7 +60,7 @@
             "lastName": "Luna",
             "gender": "male",
             "email": "jimenezluna@animalia.com",
-            "password": "helloword",
+            "password": "helloworld",
             "phone": "+1 (996) 470-2918",
             "address": "791 Independence Avenue, Taft, Northern Mariana Islands, 2795",
             "createdAt": "2018-08-11T01:00:28 +07:00"
@@ -73,7 +73,7 @@
             "lastName": "Rocha",
             "gender": "female",
             "email": "matildarocha@animalia.com",
-            "password": "helloword",
+            "password": "helloworld",
             "phone": "+1 (945) 488-2862",
             "address": "769 Burnett Street, Verdi, Colorado, 1855",
             "createdAt": "2020-09-21T04:19:08 +07:00"
