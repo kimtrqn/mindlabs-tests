@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
 import { loginUser } from '../redux/session/action';
+import { ISessions } from '../redux/session/interface';
 
 const Session: React.FC<any> = () => {
 
@@ -24,7 +25,7 @@ const Session: React.FC<any> = () => {
         
         if (findUser) {
             try {
-                dispatch(loginUser(findUser));
+                dispatch<ISessions>(loginUser(findUser));
             } catch (error: any) {
                 console.log(error);
             }
