@@ -16,6 +16,11 @@ export interface IUser {
     createdAt: string
 }
 
+export interface IAction {
+    type: 'RECEIVED_USER'
+    payload?: any
+}
+
 export type LoginUser = {
     type: typeof RECEIVED_USER,
     payload: IUser

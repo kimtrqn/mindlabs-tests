@@ -26,9 +26,10 @@ Steps
        1. Create a mockup design
        2. create component's layout
           1. homepage
-          2. login page
-          3. maybe error page in modal
-          4. profile page
+          2. login page - DONE
+          3. login errors
+          4. maybe error page in modal
+          5. profile page
        3. create different breakpoints, media queries (BONUS POINTS)
           1. mobile
           2. tablet

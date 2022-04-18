@@ -1,4 +1,5 @@
-import Session from "../pages/session";
+import Session from "../pages/sign-in";
+import Profile from '../pages/profile';
 
 interface IRoute {
     path: string,
@@ -9,6 +10,10 @@ const routes: IRoute[] = [
     {
         path: '/signin',
         element: <Session />
+    },
+    {
+        path: '/profile',
+        element: <Profile />
     }
 ]
 

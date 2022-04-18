@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from "react-router-dom";
-import Session from './pages/session';
+import Session from './pages/sign-in';
 
 import routes from './routes/routes';
 
