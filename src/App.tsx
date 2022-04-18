@@ -1,6 +1,7 @@
 import React from 'react';
-import { Routes, Route, Navigate } from "react-router-dom";
-import Session from './pages/sign-in';
+import { Routes, Route } from "react-router-dom";
+
+import { useAppSelector } from './redux/store';
 
 import routes from './routes/routes';
 

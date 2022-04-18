@@ -1,13 +1,5 @@
-import { Reducer } from 'redux';
-
-import { RECEIVED_USER } from "./types";
+import { RECEIVED_USER, REMOVED_USER } from "./types";
 import { IUser, IAction } from './interface';
-
-
-let token = false
-if (localStorage.getItem('token')) {
-  token = true
-}
 
 export type InitialState = {
     isAuthenticated: boolean,
@@ -15,10 +7,9 @@ export type InitialState = {
 }
 
 const initialState:InitialState = {
-    isAuthenticated: token,
+    isAuthenticated: false,
     user: null
 };
-
 
 const sessionReducer = (state=initialState, action:IAction):any => {
     Object.freeze(state);
@@ -30,6 +21,12 @@ const sessionReducer = (state=initialState, action:IAction):any => {
                 // user: {[action.payload.id]: action.payload},
                 user: action.payload,
                 isAuthenticated: true
+            }
+        case REMOVED_USER:
+            return {
+                // ...state,
+                isAuthenticated: false,
+                user: null
             }
         default:
             return state;

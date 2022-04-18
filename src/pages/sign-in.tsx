@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+
 
 import { loginUser } from '../redux/session/action';
 import { ISessions } from '../redux/session/interface';
@@ -8,6 +10,7 @@ import { ISessions } from '../redux/session/interface';
 const Session: React.FC<any> = () => {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [ email, setEmail ] = useState<string>('');
     const [ password, setPassword ] = useState<string>('');
@@ -37,6 +40,8 @@ const Session: React.FC<any> = () => {
                 localStorage.setItem('token', 'authenticated')
                 console.log(localStorage);
                 dispatch<ISessions>(loginUser(findUser));
+                navigate('/profile')
+
             } catch (error: any) {
                 console.log(error);
             }
