@@ -18,13 +18,12 @@ const sessionReducer = (state=initialState, action:IAction):any => {
         case RECEIVED_USER:
             return {
                 ...state, 
-                // user: {[action.payload.id]: action.payload},
                 user: action.payload,
                 isAuthenticated: true
             }
         case REMOVED_USER:
             return {
-                // ...state,
+                ...state,
                 isAuthenticated: false,
                 user: null
             }

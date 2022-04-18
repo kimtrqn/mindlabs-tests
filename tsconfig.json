@@ -21,6 +21,14 @@
     "jsx": "react-jsx"
   },
   "include": [
+    "./src/**/*",
+    "./.gatsby/**/*",
+    "./*.ts",
+    "./plugins/**/*",
     "src"
-  ]
+
+  ],
+  "files": [
+    "./src/custom.d.ts"
+  ],
 }

@@ -1,19 +1,18 @@
 import React from 'react';
-import { useAppSelector } from '../redux/store';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 
+import { useAppSelector } from '../redux/store';
 import { logoutUser } from '../redux/session/action';
+
+import Logo from '../images/class-training.svg';
 
 const Profile: React.FC<any> = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const {user} = useAppSelector((state) => state.session);
+    const { user } = useAppSelector((state) => state.session);
 
-    const logout = () => {
-        dispatch(logoutUser());
-        navigate('/signin')
-    }
+
 
     return (
         <div>
@@ -21,10 +20,11 @@ const Profile: React.FC<any> = () => {
 
             {user.email}
             </div>
-
+            <div>
+                <img src={Logo} alt="" />
+            </div>
             <div>
 
-            <button onClick={logout}>logout</button>
             </div>
             
         </div>

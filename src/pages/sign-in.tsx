@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-
 import { loginUser } from '../redux/session/action';
 import { ISessions } from '../redux/session/interface';
 
@@ -46,7 +45,6 @@ const Session: React.FC<any> = () => {
                 console.log(error);
             }
         }
-    
     }
 
     return(
