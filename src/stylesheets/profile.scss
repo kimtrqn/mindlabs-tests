@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+.profile {
+    border: 1px solid black;
+    height: 550px;
+    width: 70%;
+
+    h1 {
+        font-size: 22px;
+        font-family: $main-font;
+    }
+}

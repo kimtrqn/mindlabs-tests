@@ -12,7 +12,7 @@ const Main: React.FC<any> = () => {
                     <div className='quote pt-3'>
                         “Aspire to Inspire before you Expire”
                     </div>
-                    <div className='m-5 p-5 d-flex justify-content-center'>
+                    <div className='m-5 p-5  px-5 d-flex justify-content-center'>
                         <img src={Logo} className='img-fluid' alt="" />
                     </div>
                     <div className='second-quote mt-5'>
