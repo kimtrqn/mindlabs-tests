@@ -33,9 +33,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "client-s3-deploy": "aws s3 sync build/ s3://mindlabs-test --profile kimju",
+    "client-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id ERD4U61DZVG2W  --paths '/*' --profile kimju",
+    "client-deploy": "npm run build && npm run client-s3-deploy && npm run client-cloudfront-invalidation",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server -w db.json -p 5000"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

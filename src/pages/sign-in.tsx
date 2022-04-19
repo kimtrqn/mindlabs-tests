@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
-import axios from 'axios';
+// import axios from 'axios';
 
 import { loginUser } from '../redux/session/action';
 import { ISessions } from '../redux/session/interface';
@@ -9,6 +9,7 @@ import { ISessions } from '../redux/session/interface';
 import '../stylesheets/sign-in.scss';
 import PurpleRobot from '../images/purple-robot.png';
 import VRGoggle from '../images/vr-goggle.svg';
+import db from '../db.json';
 
 const Session: React.FC<any> = () => {
 
@@ -25,15 +26,17 @@ const Session: React.FC<any> = () => {
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        const usersList= await axios.get('http://localhost:5000/users');
-        const findUser = await usersList.data.find(
+        //json server
+        // const usersList= await axios.get('../db.json');
+        // console.log(usersList)
+        //db for aws setup
+        const findUser =  db.users.find(
             // user.email === email && user.password === password
             (user:any) => {
                 if (user.email !== email || user.password !== password) {
                     setError(true);
                     setErrorMsg('Invalid Credentials')
                 } 
-
                 return user.email === email && user.password === password;
             }
         )
