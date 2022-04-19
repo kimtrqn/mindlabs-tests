@@ -10,6 +10,7 @@ const Profile: React.FC<any> = () => {
         <div className='p-5 py-5 container d-flex justify-content-center'>
             <div className="profile">
                 <h1>Welcome {user.firstName}</h1>
+                <div>{user.email}</div>
 
             </div>
             
