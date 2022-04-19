@@ -4,7 +4,7 @@ import logger from "redux-logger";
 import thunk from 'redux-thunk';
 import {persistStore, persistReducer} from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import rootReducer from "./rootReducers";
 
 
