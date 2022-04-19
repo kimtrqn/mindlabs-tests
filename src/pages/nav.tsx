@@ -21,7 +21,7 @@ const Nav: React.FC<any> = ({ isAuthenticated }) => {
     return (
         <nav id='nav' className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
-                <div className="navbar-brand">
+                <div id='nav-name' className="navbar-brand">
                     <a id='mind-lab' href="/">
                         <img className='logo-img' src={Logo} alt="" />
                         <div>MindLabs Test</div>
@@ -34,11 +34,11 @@ const Nav: React.FC<any> = ({ isAuthenticated }) => {
                     <div className="navbar-nav ms-auto " >
                         {isAuthenticated ? 
 (                            location.pathname === '/profile' ?
-                                <span onClick={logout} id='nav-link' className="nav-item nav-link pt-5 ">Logout</span> 
+                                <span onClick={logout} id='nav-link' className="nav-item nav-link ">Logout</span> 
                                 :
-                                <a href="/profile" id='nav-link' className="nav-item nav-link pt-5">Profile</a>)
+                                <a href="/profile" id='nav-link' className="nav-item nav-link ">Profile</a>)
                             :
-                            <a href="/signin" id='nav-link' className="nav-item nav-link pt-5">Login</a>
+                            <a href="/signin" id='nav-link' className="nav-item nav-link ">Login</a>
                         }
                     </div>
                 

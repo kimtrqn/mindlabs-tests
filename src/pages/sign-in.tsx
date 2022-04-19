@@ -6,6 +6,10 @@ import axios from 'axios';
 import { loginUser } from '../redux/session/action';
 import { ISessions } from '../redux/session/interface';
 
+import '../stylesheets/sign-in.scss';
+import PurpleRobot from '../images/purple-robot.png';
+import VRGoggle from '../images/vr-goggle.svg';
+
 const Session: React.FC<any> = () => {
 
     const dispatch = useDispatch();
@@ -48,43 +52,69 @@ const Session: React.FC<any> = () => {
     }
 
     return(
-        <div>
-            <div>
-                {error && (
-                    <div>{errorMsg}</div>
-                )}
+        <div className='container'>
+            <div className="sign-in">
+                <div className='container d-flex justify-content-center'>
+                    <img src={PurpleRobot} className='purple-robot' alt="" />
+                </div>
+                <div className='container'>
+                    <div className='form-container '>
+                        <div className='form-title'>
+                            <h3>Sign In</h3>
+                            <img src={VRGoggle} alt="" className=''/>
+                        </div>
+
+                        <div className='session-form d-flex justify-content-center'>
+                            <div className="session-error">
+                                {error && (
+                                    <h2>{errorMsg}</h2>
+                                )}
+                            </div>
+                            <form action="">
+                                <input
+                                id="username"
+                                className="input"
+                                onChange={updateEmail}
+                                placeholder="Email"
+                                type="text"
+                                name="username"
+                                value={email}
+                                />
+
+                                <input
+                                id="password"
+                                className="input"
+                                onChange={updatePassword}
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                                value={password}
+                                />
+                                <div className='submit-right'>
+
+                                    <input
+                                    className="input submit float-right"
+                                    onClick={handleSubmit}
+                                    type="submit"
+                                    value={'Log In'}
+                                    />
+                                </div>
+
+                            </form>
+                        </div>
+                        
+
+
+
+                    </div>
+                </div>
             </div>
-        <form action="">
-            <input
-            id="username"
-            className="input"
-            onChange={updateEmail}
-            placeholder="Username"
-            type="text"
-            name="username"
-            value={email}
-            />
 
-            <input
-            id="password"
-            className="input"
-            onChange={updatePassword}
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={password}
-            />
-
-            <input
-            className="input submit"
-            onClick={handleSubmit}
-            type="submit"
-            value={'Log In'}
-            />
-        </form>
+        
         </div>
     )
 
 };
 
 export default Session;
+

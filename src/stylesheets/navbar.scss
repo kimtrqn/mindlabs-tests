@@ -2,6 +2,10 @@
 
 #nav {
     background-color: $gray;
+    
+    // @media screen and (max-width: 991px) {
+    //     width: 100%;
+    // }
 }
 
 .logo-img {
@@ -19,9 +23,11 @@
     div {
         padding: 5px;
         font-size: 25px;
-        padding-top: 10%;
+        // padding-top: 12%;
+        padding-top: 22px;
         
     }
+
 }
 
 #nav-link {
@@ -30,5 +36,10 @@
     font-weight: 400;
     font-size: 16px;
     margin-right: 25px;
+    padding-top: 25px;
 
+    @media screen and (max-width: 991px) {
+        text-align: center;
+        font-size: 20px;
+    }
 }
