@@ -8,7 +8,6 @@ import { ISessions } from '../redux/session/interface';
 
 import '../stylesheets/sign-in.scss';
 import PurpleRobot from '../images/purple-robot.png';
-import VRGoggle from '../images/vr-goggle.svg';
 import db from '../db.json';
 
 const Session: React.FC<any> = () => {
@@ -33,18 +32,17 @@ const Session: React.FC<any> = () => {
         const findUser =  db.users.find(
             // user.email === email && user.password === password
             (user:any) => {
-                if (user.email !== email || user.password !== password) {
+                if (user.email !== email.toLowerCase() || user.password !== password) {
                     setError(true);
                     setErrorMsg('Invalid Credentials')
                 } 
-                return user.email === email && user.password === password;
+                return user.email === email.toLowerCase() && user.password === password;
             }
         )
 
         if (findUser) {
             try {
                 localStorage.setItem('token', 'authenticated')
-                console.log(localStorage);
                 dispatch<ISessions>(loginUser(findUser));
                 navigate('/profile')
 
@@ -54,70 +52,84 @@ const Session: React.FC<any> = () => {
         }
     }
 
-    return(
-        <div className='container'>
-            <div className="sign-in">
-                <div className='container d-flex justify-content-center'>
-                    <img src={PurpleRobot} className='purple-robot' alt="" />
+    return (
+        <div className="sign-in">
+            <div className="pink-container">
+                <div className="image-container">
+                    <img src={PurpleRobot} alt="" />
                 </div>
-                <div className='container'>
-                    <div className='form-container '>
-                        <div className='form-title'>
-                            <h3>Sign In</h3>
-                            <img src={VRGoggle} alt="" className=''/>
-                        </div>
-
-                        <div className='session-form d-flex justify-content-center'>
-                            <div className="session-error">
-                                {error && (
-                                    <h2>{errorMsg}</h2>
-                                )}
-                            </div>
-                            <form action="">
-                                <input
-                                id="username"
-                                className="input"
-                                onChange={updateEmail}
-                                placeholder="Email"
-                                type="text"
-                                name="username"
-                                value={email}
-                                />
-
-                                <input
-                                id="password"
-                                className="input"
-                                onChange={updatePassword}
-                                placeholder="Password"
-                                type="password"
-                                name="password"
-                                value={password}
-                                />
-                                <div className='submit-right'>
-
-                                    <input
-                                    className="input submit float-right"
-                                    onClick={handleSubmit}
-                                    type="submit"
-                                    value={'Log In'}
-                                    />
-                                </div>
-
-                            </form>
-                        </div>
-                        
-
-
-
+                <div className="form-container">
+                    <div className="session-error">
+                        {error && (
+                            <h2>{errorMsg}</h2>
+                        )}
                     </div>
-                </div>
-            </div>
+                    <form action="">
+                        <input
+                        id="username"
+                        className="input"
+                        onChange={updateEmail}
+                        placeholder="Email"
+                        type="text"
+                        name="username"
+                        value={email}
+                        />
 
-        
+                        <input
+                        id="password"
+                        className="input"
+                        onChange={updatePassword}
+                        placeholder="Password"
+                        type="password"
+                        name="password"
+                        value={password}
+                        />
+                        <div className='submit-right'>
+
+                            <input
+                            className="input submit float-right"
+                            onClick={handleSubmit}
+                            type="submit"
+                            value={'Log In'}
+                            />
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
         </div>
     )
+
+
 
 };
 
 export default Session;
 
+
+
+    // return(
+    //     <div className='container'>
+    //         <div className="sign-in">
+    //             <div className='container d-flex justify-content-center'>
+    //                 <img src={PurpleRobot} className='purple-robot' alt="" />
+    //             </div>
+    //             <div className='container'>
+    //                 <div className='form-container '>
+    //                     <div className='form-title'>
+    //                         <h3>Sign In</h3>
+    //                     </div>
+
+    
+                        
+
+
+
+    //                 </div>
+    //             </div>
+    //         </div>
+
+        
+    //     </div>
+    // )

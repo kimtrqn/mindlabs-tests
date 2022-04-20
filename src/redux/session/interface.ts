@@ -4,7 +4,6 @@ import { loginUser, logoutUser } from "./action";
 
 export interface IUser {
     readonly id: string,
-    picture: string,
     age: number,
     firstName: string,
     lastName: string,

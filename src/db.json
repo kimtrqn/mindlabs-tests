@@ -2,7 +2,6 @@
     "users":[
         {
             "id": "62585f59b56935093d810abd",
-            "picture": "http://placehold.it/32x32",
             "age": 26,
             "firstName": "Madeline ",
             "lastName": "Cole",
@@ -15,7 +14,6 @@
         },
         {
             "id": "62585f59907dbf59948c5a67",
-            "picture": "http://placehold.it/32x32",
             "age": 33,
             "firstName": "Lilian ",
             "lastName": "Brown",
@@ -28,7 +26,6 @@
         },
         {
             "id": "62585f59ce543d7db68f98d1",
-            "picture": "http://placehold.it/32x32",
             "age": 25,
             "firstName": "Bianca ",
             "lastName": "Velez",
@@ -41,7 +38,6 @@
         },
         {
             "id": "62585f592ae98c07f12777be",
-            "picture": "http://placehold.it/32x32",
             "age": 32,
             "firstName": "Welch ",
             "lastName": "Cardenas",
@@ -54,7 +50,6 @@
         },
         {
             "id": "62585f59cf6df8cb5593ba85",
-            "picture": "http://placehold.it/32x32",
             "age": 25,
             "firstName": "Jimenez ",
             "lastName": "Luna",
@@ -67,7 +62,6 @@
         },
         {
             "id": "62585f591374b4c95365755a",
-            "picture": "http://placehold.it/32x32",
             "age": 32,
             "firstName": "Matilda ",
             "lastName": "Rocha",
